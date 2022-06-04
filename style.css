@@ -18,11 +18,20 @@ body{
 
 #searchbar{
     position: fixed;
-    right: 15px; 
-    height: 20px;
+    top: 75px;
+    right: 55px; 
+    height: 70px;
+    width: 19.5%;
+    font-size: 40px;
     margin-top: 20px;
     border-style: solid;
     border-color: black;
+    border-radius: 10px;
+    border-width: 4px;
+}
+
+#searchbar:search-query{
+    border-color: rgb(255, 0, 0);
 }
 
 #add-content{
@@ -44,47 +53,139 @@ body{
 }
 
 
-.ducky-container{
-    display: flex;
-    flex-direction: column;
+#show-questions{
+    background-color: cornflowerblue;
+    color: white;
+    position: fixed;
+    top: 200px;
+    right: 55px;
+    height: 70px;
+    width: 20%;
+    font-size: 20px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 25px;
 }
 
-.ducky-content{
+#show-questions:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    background-color:#1a67a7;
+}
+
+
+#show-discussions{
+    background-color: cornflowerblue;
+    color: white;
+    position: fixed;
+    top: 300px;
+    right: 55px;
+    height: 70px;
+    width: 20%;
+    font-size: 20px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 25px;
+}
+
+#show-discussions:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    background-color:#1a67a7;
+}
+
+
+#show-tutorials{
+    background-color: cornflowerblue;
+    color: white;
+    position: fixed;
+    top: 400px;
+    right: 55px;
+    height: 70px;
+    width: 20%;
+    font-size: 20px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 25px;
+}
+
+#show-tutorials:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    background-color:#1a67a7;
+}
+
+
+
+.ducky{
+    /* display: flex; */
     background-color: white;
     border-style: solid;
     border-color: black;
     border-radius: 10px;
     margin: 25px;
+    padding: 10px;
     min-height: 100px;
+    width: 70%
+    
+}
+
+.ducky:hover{
+    border-color: rgb(0, 140, 255);
+}
+
+.ducky-container{
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.ducky-content{
+    /* background-color: white;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    margin: 25px;
+    min-height: 100px; 
     display: block;
-    display: flex;
+    display: flex;*/
     max-width: 1300px;
     /* min-width: 300px;*/
     /* display: inline-block;  */
 }
 
 .ducky-title{
-    margin: 0px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    /* margin: 0px;
     margin-top: 40px;
-    margin-left: 10px; 
+    margin-left: 10px;  */
 }
 
 .ducky-author{
-    margin: 0px; 
+    text-align: right;
+    margin-bottom: 6px;
+    font-size: 20px;
+    /* margin: 0px; 
     margin-top: 55px;
     position: fixed;
     padding-right: 0px;
     right: 180px;
-    font-size: 20px;
+    font-size: 20px; */
+
      /* margin-bottom: 10px; 
      font-weight: bold; */
 }
 
 .ducky-time{
-    margin: 0px; 
+    text-align: right;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 20px;
+    /* margin: 0px; 
     margin-top: 75px;
     position: fixed;
     padding-right: 0px;
     right: 180px;
-    font-size: 15px;
+    font-size: 15px; */
 }
