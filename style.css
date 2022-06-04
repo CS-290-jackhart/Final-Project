@@ -1,0 +1,89 @@
+body{
+    margin: 0px;
+    background-color: lightgray;
+}
+
+#header-container{
+    display: flex;
+    background-color: #319df6;
+}
+
+#site-title{
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 40px;
+    font-weight: 100;
+    color: yellow;
+}
+
+#searchbar{
+    position: fixed;
+    right: 15px; 
+    height: 20px;
+    margin-top: 20px;
+    border-style: solid;
+    border-color: black;
+}
+
+#add-content{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    height: 60px;
+    width: 60px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 150px;
+    font-size: 35px;
+}
+
+#add-content:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+.ducky-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.ducky-content{
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    margin: 25px;
+    min-height: 100px;
+    display: block;
+    display: flex;
+    max-width: 1300px;
+    /* min-width: 300px;*/
+    /* display: inline-block;  */
+}
+
+.ducky-title{
+    margin: 0px;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+.ducky-author{
+    margin: 0px; 
+    margin-top: 55px;
+    position: fixed;
+    padding-right: 0px;
+    right: 180px;
+    font-size: 20px;
+    /* margin-bottom: 10px; 
+     font-weight: bold; */
+}
+
+.ducky-time{
+    margin: 0px; 
+    margin-top: 75px;
+    position: fixed;
+    padding-right: 0px;
+    right: 180px;
+    font-size: 15px;
+}
