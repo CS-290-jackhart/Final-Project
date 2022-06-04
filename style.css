@@ -40,6 +40,7 @@ body{
 #add-content:hover{
     transform: scale(1.1);
     cursor: pointer;
+    background-color: yellow;
 }
 
 
@@ -65,7 +66,7 @@ body{
 .ducky-title{
     margin: 0px;
     margin-top: 40px;
-    margin-left: 10px;
+    margin-left: 10px; 
 }
 
 .ducky-author{
@@ -75,7 +76,7 @@ body{
     padding-right: 0px;
     right: 180px;
     font-size: 20px;
-    /* margin-bottom: 10px; 
+     /* margin-bottom: 10px; 
      font-weight: bold; */
 }
 
