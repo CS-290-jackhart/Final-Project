@@ -65,6 +65,7 @@ function sortDisc(event)
     {
         if(event.currentTarget.id === 'show-discussions')
         {   
+            console.log("Showing discussions")
             if(duckyCollection[i].classList.value === 'ducky discussion')
             {
                 duckyCollection[i].style.display = 'block'
@@ -73,6 +74,7 @@ function sortDisc(event)
             }
         }else if(event.currentTarget.id === 'show-questions')
         {   
+            console.log("Showing questions")
             if(duckyCollection[i].classList.value === 'ducky question')
             {
                 duckyCollection[i].style.display = 'block'
@@ -81,6 +83,7 @@ function sortDisc(event)
             }
         }else if(event.currentTarget.id === 'show-tutorials')
         {   
+            console.log("Showing tutorials")
             if(duckyCollection[i].classList.value === 'ducky tutorial')
             {
                 duckyCollection[i].style.display = 'block'

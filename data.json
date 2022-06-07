@@ -1,53 +1,62 @@
 [
     {
+        "type":"tutorial",
         "text": "Based and Red Pilled Sample Text",
         "label": "TUTORIAL",
         "author": "Ethan Hardey",
         "time": "12:42"
     },
-    {
+    {   
+        "type":"tutorial",
         "text": "Based and Red Pilled Sample Text",
         "label": "TUTORIAL",
         "author": "Ethan Hardey",
         "time": "12:42"
     },
-    {
+    {   
+        "type":"tutorial",
         "text": "Based and Red Pilled Sample Text",
         "label": "TUTORIAL",
         "author": "Ethan Hardey",
         "time": "12:42"
     },
-    {
+    {   
+        "type":"question",
+        "text": "Based and Red Pilled Sample Text",
+        "label": "QUESTION",
+        "author": "Ethan Hardey",
+        "time": "12:42"
+    },
+    {   
+        "type":"question",
+        "text": "Based and Red Pilled Sample Text",
+        "label": "QUESTION",
+        "author": "Ethan Hardey",
+        "time": "12:42"
+    },
+    {   
+        "type":"question",
         "text": "Based and Red Pilled Sample Text",
         "label": "QUESTION",
         "author": "Ethan Hardey",
         "time": "12:42"
     },
     {
-        "text": "Based and Red Pilled Sample Text",
-        "label": "QUESTION",
-        "author": "Ethan Hardey",
-        "time": "12:42"
-    },
-    {
-        "text": "Based and Red Pilled Sample Text",
-        "label": "QUESTION",
-        "author": "Ethan Hardey",
-        "time": "12:42"
-    },
-    {
+        "type":"discussion",
         "text": "Based and Red Pilled Sample Text",
         "label": "DISCUSSION",
         "author": "Ethan Hardey",
         "time": "12:42"
     },
     {
+        "type":"discussion",
         "text": "Based and Red Pilled Sample Text",
         "label": "DISCUSSION",
         "author": "Ethan Hardey",
         "time": "12:42"
     },
     {
+        "type":"discussion",
         "text": "Based and Red Pilled Sample Text",
         "label": "DISCUSSION",
         "author": "Ethan Hardey",
