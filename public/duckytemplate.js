@@ -29,8 +29,8 @@ templates['ducky'] = template({"1":function(container,depth0,helpers,partials,da
     + alias4(((helper = (helper = lookupProperty(helpers,"title") || (depth0 != null ? lookupProperty(depth0,"title") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data,"loc":{"start":{"line":3,"column":31},"end":{"line":3,"column":40}}}) : helper)))
     + "</p>\r\n        <p class=\"type-label\">"
     + alias4(((helper = (helper = lookupProperty(helpers,"label") || (depth0 != null ? lookupProperty(depth0,"label") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"label","hash":{},"data":data,"loc":{"start":{"line":4,"column":30},"end":{"line":4,"column":39}}}) : helper)))
-    + "</p>\r\n        <p class=\"ducky-text text-hidden\">"
-    + alias4(((helper = (helper = lookupProperty(helpers,"text") || (depth0 != null ? lookupProperty(depth0,"text") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"text","hash":{},"data":data,"loc":{"start":{"line":5,"column":42},"end":{"line":5,"column":50}}}) : helper)))
+    + "</p>\r\n        <p class=\"ducky-text hidden\">"
+    + alias4(((helper = (helper = lookupProperty(helpers,"text") || (depth0 != null ? lookupProperty(depth0,"text") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"text","hash":{},"data":data,"loc":{"start":{"line":5,"column":37},"end":{"line":5,"column":45}}}) : helper)))
     + "</p>\r\n        <p class=\"ducky-author\">"
     + alias4(((helper = (helper = lookupProperty(helpers,"author") || (depth0 != null ? lookupProperty(depth0,"author") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"author","hash":{},"data":data,"loc":{"start":{"line":6,"column":32},"end":{"line":6,"column":42}}}) : helper)))
     + "</p>\r\n        <p class=\"ducky-time\">"

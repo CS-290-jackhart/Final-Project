@@ -69,7 +69,7 @@ function sortDuckys(event) {
     if((event.currentTarget.id === 'show-discussions') && (discussionsButton.classList.value === 'clicked')){
         //clear all current sorted elements prior to sorting
         for (var k = 0; k < duckyCollection.length; k++){
-            duckyCollection[k].style.display = 'block' // duckyCollection[k].classList.add('hidden')
+            duckyCollection[k].classList.remove('hidden') // duckyCollection[k].classList.add('hidden')
         }
         //set the button to unclicked
         discussionsButton.classList.remove('clicked')
@@ -77,7 +77,7 @@ function sortDuckys(event) {
     else if((event.currentTarget.id === 'show-questions') && (questionsButton.classList.value === 'clicked')){
         //clear all current sorted elements prior to sorting
         for (var k = 0; k < duckyCollection.length; k++){
-            duckyCollection[k].style.display = 'block'
+            duckyCollection[k].classList.remove('hidden')
         }
         //set the button to unclicked
         questionsButton.classList.remove('clicked')
@@ -85,7 +85,7 @@ function sortDuckys(event) {
     else if((event.currentTarget.id === 'show-tutorials') && (tutorialsButton.classList.value === 'clicked')){
         //clear all current sorted elements prior to sorting
         for (var k = 0; k < duckyCollection.length; k++){
-            duckyCollection[k].style.display = 'block'
+            duckyCollection[k].classList.remove('hidden')
         }
         //set the button to unclicked
         tutorialsButton.classList.remove('clicked')
@@ -97,31 +97,31 @@ function sortDuckys(event) {
                 questionsButton.classList.remove('clicked')
                 tutorialsButton.classList.remove('clicked')
                 console.log("Showing discussions")
-                if (duckyCollection[i].classList.value === 'ducky discussion') {
-                    duckyCollection[i].style.display = 'block'
+                if ((duckyCollection[i].classList.contains('ducky')) && (duckyCollection[i].classList.contains('discussion'))) {
+                    duckyCollection[i].classList.remove('hidden')
                 } 
                 else {
-                    duckyCollection[i].style.display = 'none'
+                    duckyCollection[i].classList.add('hidden')
                 }
             } else if (event.currentTarget.id === 'show-questions') {
                 questionsButton.classList.add('clicked')
                 discussionsButton.classList.remove('clicked')
                 tutorialsButton.classList.remove('clicked')
                 console.log("Showing questions")
-                if (duckyCollection[i].classList.value === 'ducky question') {
-                    duckyCollection[i].style.display = 'block'
+                if ((duckyCollection[i].classList.contains('ducky')) && (duckyCollection[i].classList.contains('question'))) {
+                    duckyCollection[i].classList.remove('hidden')
                 } else {
-                    duckyCollection[i].style.display = 'none'
+                    duckyCollection[i].classList.add('hidden')
                 }
             } else if (event.currentTarget.id === 'show-tutorials') {
                 tutorialsButton.classList.add('clicked')
                 questionsButton.classList.remove('clicked')
                 discussionsButton.classList.remove('clicked')
                 console.log("Showing tutorials")
-                if (duckyCollection[i].classList.value === 'ducky tutorial') {
-                    duckyCollection[i].style.display = 'block'
+                if ((duckyCollection[i].classList.contains('ducky')) && (duckyCollection[i].classList.contains('tutorial'))) {
+                    duckyCollection[i].classList.remove('hidden')
                 } else {
-                    duckyCollection[i].style.display = 'none'
+                    duckyCollection[i].classList.add('hidden')
                 }
             }
         }
@@ -208,6 +208,14 @@ var goBackButton = document.getElementById('go-back')
 goBackButton.addEventListener('click', returnHome)
 
 function showPost(event) {
+
+    //set any clicked buttons to unclicked
+    var discussionsButton = document.getElementById('show-discussions')
+    var questionsButton = document.getElementById('show-questions')
+    var tutorialsButton = document.getElementById('show-tutorials')
+    discussionsButton.classList.remove('clicked')
+    questionsButton.classList.remove('clicked')
+    tutorialsButton.classList.remove('clicked')
 
     hideContent()
 
