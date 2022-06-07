@@ -145,6 +145,14 @@ button#add-content {
 
 }
 
+.text-hidden{
+    display: none;
+}
+
+.clicked{
+    background-color: #6a65ce !important;
+}
+
 .post {
     font-family: Arial, Helvetica, sans-serif;
     background-color: white;

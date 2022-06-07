@@ -60,31 +60,73 @@ xButton[0].addEventListener('click', toggleModal)
 
 function sortDuckys(event) {
     var duckyCollection = document.getElementsByClassName('ducky')
+    var discussionsButton = document.getElementById('show-discussions')
+    var questionsButton = document.getElementById('show-questions')
+    var tutorialsButton = document.getElementById('show-tutorials')
 
-    for (var i = 0; i < duckyCollection.length; i++) {
-        if (event.currentTarget.id === 'show-discussions') {
-            console.log("Showing discussions")
-            if (duckyCollection[i].classList.value === 'ducky discussion') {
-                duckyCollection[i].style.display = 'block'
-            } else {
-                duckyCollection[i].style.display = 'none'
-            }
-        } else if (event.currentTarget.id === 'show-questions') {
-            console.log("Showing questions")
-            if (duckyCollection[i].classList.value === 'ducky question') {
-                duckyCollection[i].style.display = 'block'
-            } else {
-                duckyCollection[i].style.display = 'none'
-            }
-        } else if (event.currentTarget.id === 'show-tutorials') {
-            console.log("Showing tutorials")
-            if (duckyCollection[i].classList.value === 'ducky tutorial') {
-                duckyCollection[i].style.display = 'block'
-            } else {
-                duckyCollection[i].style.display = 'none'
+
+    //if they clicked the discussions button, but it was already clicked
+    if((event.currentTarget.id === 'show-discussions') && (discussionsButton.classList.value === 'clicked')){
+        //clear all current sorted elements prior to sorting
+        for (var k = 0; k < duckyCollection.length; k++){
+            duckyCollection[k].style.display = 'block'
+        }
+        //set the button to unclicked
+        discussionsButton.classList.remove('clicked')
+    }
+    else if((event.currentTarget.id === 'show-questions') && (questionsButton.classList.value === 'clicked')){
+        //clear all current sorted elements prior to sorting
+        for (var k = 0; k < duckyCollection.length; k++){
+            duckyCollection[k].style.display = 'block'
+        }
+        //set the button to unclicked
+        questionsButton.classList.remove('clicked')
+    }
+    else if((event.currentTarget.id === 'show-tutorials') && (tutorialsButton.classList.value === 'clicked')){
+        //clear all current sorted elements prior to sorting
+        for (var k = 0; k < duckyCollection.length; k++){
+            duckyCollection[k].style.display = 'block'
+        }
+        //set the button to unclicked
+        tutorialsButton.classList.remove('clicked')
+    }
+    else{
+        for (var i = 0; i < duckyCollection.length; i++) {
+            if (event.currentTarget.id === 'show-discussions') {
+                discussionsButton.classList.add('clicked')
+                questionsButton.classList.remove('clicked')
+                tutorialsButton.classList.remove('clicked')
+                console.log("Showing discussions")
+                if (duckyCollection[i].classList.value === 'ducky discussion') {
+                    duckyCollection[i].style.display = 'block'
+                } 
+                else {
+                    duckyCollection[i].style.display = 'none'
+                }
+            } else if (event.currentTarget.id === 'show-questions') {
+                questionsButton.classList.add('clicked')
+                discussionsButton.classList.remove('clicked')
+                tutorialsButton.classList.remove('clicked')
+                console.log("Showing questions")
+                if (duckyCollection[i].classList.value === 'ducky question') {
+                    duckyCollection[i].style.display = 'block'
+                } else {
+                    duckyCollection[i].style.display = 'none'
+                }
+            } else if (event.currentTarget.id === 'show-tutorials') {
+                tutorialsButton.classList.add('clicked')
+                questionsButton.classList.remove('clicked')
+                discussionsButton.classList.remove('clicked')
+                console.log("Showing tutorials")
+                if (duckyCollection[i].classList.value === 'ducky tutorial') {
+                    duckyCollection[i].style.display = 'block'
+                } else {
+                    duckyCollection[i].style.display = 'none'
+                }
             }
         }
     }
+
 }
 
 var sortDiscButton = document.getElementById('show-discussions')
