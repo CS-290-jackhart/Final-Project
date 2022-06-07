@@ -165,13 +165,17 @@ function publishPost(event) {
     var titleFieldContent = titleField.value
 
     textFieldContent = textFieldContent.replaceAll(' ', '')
-    authorFieldContent = textFieldContent.replaceAll(' ', '')
-    titleFieldContent = textFieldContent.replaceAll(' ', '')
+    authorFieldContent = authorFieldContent.replaceAll(' ', '')
+    titleFieldContent = titleFieldContent.replaceAll(' ', '')
 
     var time = new Date()
     var userTime = time.getHours() + ":" + time.getMinutes()
 
-    if ((textFieldContent != '') && (authorFieldContent != '') && titleFieldContent != '') {
+    if ((textFieldContent != '') && (authorFieldContent != '') && (titleFieldContent != '') && (dropField.value != '')) {
+
+        console.log(">> title: ", titleFieldContent)
+        console.log(">> text: ", textFieldContent)
+        console.log(">> author: ", authorFieldContent)
 
         var ducky = Handlebars.templates.ducky({
             showText: false,
@@ -191,11 +195,22 @@ function publishPost(event) {
 
         toggleModal()
 
+        //unsort all posts
+        var duckyCollection = document.getElementsByClassName('ducky')
+        var discussionsButton = document.getElementById('show-discussions')
+        var questionsButton = document.getElementById('show-questions')
+        var tutorialsButton = document.getElementById('show-tutorials')
+        for (var k = 0; k < duckyCollection.length; k++){
+            duckyCollection[k].style.display = 'block'
+        }
+        discussionsButton.classList.remove('clicked')
+        questionsButton.classList.remove('clicked')
+        tutorialsButton.classList.remove('clicked')
 
     }
     else {
         console.log("It was empty")
-        alert("You did not properly fill the text/author fields.")
+        alert("You did not properly fill the title/text/author fields.")
     }
 }
 
