@@ -69,7 +69,7 @@ function sortDuckys(event) {
     if((event.currentTarget.id === 'show-discussions') && (discussionsButton.classList.value === 'clicked')){
         //clear all current sorted elements prior to sorting
         for (var k = 0; k < duckyCollection.length; k++){
-            duckyCollection[k].style.display = 'block'
+            duckyCollection[k].style.display = 'block' // duckyCollection[k].classList.add('hidden')
         }
         //set the button to unclicked
         discussionsButton.classList.remove('clicked')
@@ -138,12 +138,88 @@ sortQButton.addEventListener('click', sortDuckys)
 var sortTutButton = document.getElementById('show-tutorials')
 sortTutButton.addEventListener('click', sortDuckys)
 
+function hideContent()
+{
+    var duckyContainer = document.getElementById('ducky-container')
+
+    for(var i = 0; i < duckyContainer.children.length; i++)
+    {
+        duckyContainer.children[i].classList.add("hidden")
+    }
+}
+
+function addContent()
+{
+    var duckyContainer = document.getElementById('ducky-container')
 
 
+    for(var i = 0; i < duckyContainer.children.length; i++)
+    {
+        if(duckyContainer.children[i].classList.contains("ducky"))
+        {
+            duckyContainer.children[i].classList.remove("hidden")
+            duckyContainer.children[i].children[0].children[2].classList.add("hidden")
+        }else{
+            duckyContainer.children[i].classList.add("hidden")
+        }
+
+    }
+}
+
+function hideButtons()
+{
+    var buttonContainer = document.getElementById('button-container')
+    for(var i = 0; i < buttonContainer.children.length; i++)
+    {
+        if(buttonContainer.children[i].style.display != 'none')
+        {
+            buttonContainer.children[i].style.display = 'none'
+        }else
+        {
+            buttonContainer.children[i].style.display = 'flex'
+        }
+    }
+
+    var unhideReply = document.getElementById('add-replies')
+    unhideReply.style.display = 'block'
+}
+
+function returnHome()
+{
+    var buttonContainer = document.getElementById('button-container')
+    for(var i = 0; i < buttonContainer.children.length; i++)
+    {
+        if(buttonContainer.children[i].style.display === 'none')
+        {
+            buttonContainer.children[i].style.display = 'flex'
+        }else
+        {
+            buttonContainer.children[i].style.display = 'none'
+        }
+    }
+
+    var unhideReply = document.getElementById('add-replies')
+    unhideReply.style.display = 'none'
+
+    addContent()
+}
+
+var goBackButton = document.getElementById('go-back')
+goBackButton.addEventListener('click', returnHome)
 
 function showPost(event) {
 
-    console.log("I'm showing a post")
+    hideContent()
+
+    event.currentTarget.classList.remove("hidden")
+
+    var repliesContainer = event.currentTarget.nextSibling.nextSibling
+    repliesContainer.classList.remove("hidden")
+
+    var duckyText = event.currentTarget.children[0].children[2]
+    duckyText.classList.remove("hidden")
+
+    hideButtons()
 
 }
 

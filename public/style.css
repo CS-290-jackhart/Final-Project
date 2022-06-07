@@ -18,6 +18,7 @@ body {
     display: flex;
     background-color: var(--navbar-bg-color);
     align-items: center;;
+    z-index: 100;
 }
 
 #header-container img {
@@ -84,6 +85,38 @@ body {
 
 button#add-content {
     margin-top: 45px;
+}
+
+#add-replies{
+    height: 12%;
+    font-size: 160%;
+    font-weight: bold;
+    border-style: solid;
+    border-color: var(--button-bg-color);
+    border-radius: 15px;
+    border-width: 1px;
+    margin-top: 15px;
+    background-color: var(--button-bg-color);
+    position: fixed;
+    bottom: 2%;
+    right: 1%;
+    width: 24%;
+}
+
+#background{
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    height: 100%;
+    background-color: rgb(185, 184, 184);
+    width: 27%; 
+    z-index: -2;
+}
+
+#add-replies:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    background-color: var(--navbar-bg-color);
 }
 
 .ducky {

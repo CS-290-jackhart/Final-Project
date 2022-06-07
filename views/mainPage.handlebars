@@ -3,9 +3,15 @@
         {{> ducky}}
     {{/each}}
 </main>
-
+<div id="background">
+</div>
 <main id="button-container">
     <input type="text" id="searchbar" placeholder="Search Posts...">
+    <button type="button" id="go-back" style="display: none">
+        <p>
+            Go Back
+        </p>
+    </button>
     <button type="button" id="show-questions">
         <p>
             Sort By Questions
@@ -27,6 +33,12 @@
         </p>
     </button>
 </main>
+
+<button type="button" id="add-replies" style="display: none">
+    <p>
+        Add Reply
+    </p>
+</button>
 
 <main id="modal-container">
     <div id="modal-backdrop" class="hidden"></div>
