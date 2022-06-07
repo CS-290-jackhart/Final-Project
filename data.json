@@ -1,5 +1,6 @@
 [
     {
+        "title":"Le gaming",
         "type":"tutorial",
         "text": "Based and Red Pilled Sample Text",
         "label": "TUTORIAL",
@@ -7,6 +8,7 @@
         "time": "12:42"
     },
     {   
+        "title":"Le gaming",
         "type":"tutorial",
         "text": "Based and Red Pilled Sample Text",
         "label": "TUTORIAL",
@@ -14,13 +16,15 @@
         "time": "12:42"
     },
     {   
+        "title":"Le gaming",
         "type":"tutorial",
         "text": "Based and Red Pilled Sample Text",
         "label": "TUTORIAL",
         "author": "Ethan Hardey",
         "time": "12:42"
     },
-    {   
+    {  
+        "title":"Le gaming", 
         "type":"question",
         "text": "Based and Red Pilled Sample Text",
         "label": "QUESTION",
@@ -28,6 +32,7 @@
         "time": "12:42"
     },
     {   
+        "title":"Le gaming",
         "type":"question",
         "text": "Based and Red Pilled Sample Text",
         "label": "QUESTION",
@@ -35,6 +40,7 @@
         "time": "12:42"
     },
     {   
+        "title":"Le gaming",
         "type":"question",
         "text": "Based and Red Pilled Sample Text",
         "label": "QUESTION",
@@ -42,6 +48,7 @@
         "time": "12:42"
     },
     {
+        "title":"Le gaming",
         "type":"discussion",
         "text": "Based and Red Pilled Sample Text",
         "label": "DISCUSSION",
@@ -49,6 +56,7 @@
         "time": "12:42"
     },
     {
+        "title":"Le gaming",
         "type":"discussion",
         "text": "Based and Red Pilled Sample Text",
         "label": "DISCUSSION",
@@ -56,6 +64,7 @@
         "time": "12:42"
     },
     {
+        "title":"Le gaming",
         "type":"discussion",
         "text": "Based and Red Pilled Sample Text",
         "label": "DISCUSSION",

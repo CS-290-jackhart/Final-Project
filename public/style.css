@@ -44,6 +44,7 @@ body {
     height: 100%;
 }
 
+
 #button-container input {
     height: 60px;
     font-size: 40px;
@@ -138,6 +139,10 @@ button#add-content {
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 20px;
+}
+
+.ducky-text{
+
 }
 
 .post {
