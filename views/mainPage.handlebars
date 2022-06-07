@@ -1,0 +1,67 @@
+<main id="ducky-container">
+    {{#each duckies}}
+        {{> ducky}}
+    {{/each}}
+</main>
+
+<main id="button-container">
+    <input type="text" id="searchbar" placeholder="Search Posts...">
+    <button type="button" id="show-questions">
+        <p>
+            Sort By Questions
+        </p>
+    </button>
+    <button type="button" id="show-discussions">
+        <p>
+            Sort By Discussions
+        </p>
+    </button>
+    <button type="button" id="show-tutorials">
+        <p>
+            Sort By Tutorials
+        </p>
+    </button>
+    <button type="button" id="add-content">
+        <p id="add-content-para">
+            Create Post
+        </p>
+    </button>
+</main>
+
+<main id="modal-container">
+    <div id="modal-backdrop" class="hidden"></div>
+    <div id="create-ducky-modal" class="hidden">
+        <div class="modal-dialog">
+
+        <div class="modal-header">
+            <h3>Create a Ducky</h3>
+            <button type="button" class="modal-close-button">&times;</button>
+        </div>
+
+        <div class="modal-body">
+            <div class="ducky-input-element">
+            <label for="ducky-text-input">Ducky text</label>
+            <textarea id="ducky-text-input"></textarea>
+            </div>
+            <div class="ducky-input-element">
+            <label for="ducky-author-input">Author</label>
+            <input type="text" id="ducky-author-input">
+            </div>
+            <div class="ducky-input-element">
+            <label for="ducky-type-input">Post Type</label>
+            <select name="type" id="ducky-type-input">
+                <option value="discussion">Discussion</option>
+                <option value="tutorial">Tutorial</option>
+                <option value="question">Question</option>
+            </select>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="modal-cancel-button">Cancel</button>
+            <button type="button" class="modal-accept-button">Create ducky</button>
+        </div>
+
+        </div>
+    </div>
+</main>
