@@ -4,7 +4,6 @@ var exphbs = require('express-handlebars')
 var fs = require('fs')
 
 var data = require("./data.json")
-// var tempData = data.postArray.reverse()
 
 var app = express()
 
@@ -18,9 +17,22 @@ app.use(express.json())
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-    res.status(200).render('mainPage', {
-        duckies: data.postArray
+  res.status(200).render('mainPage', {
+      duckies: data.postArray
+  })
+})
+
+app.get('/posts/:num', (req, res, next) => {
+  let num = req.params.num
+  if (num < 0 || num >= data.postArray.length) {
+    next()
+  } else {
+    console.log(data.postArray[num].replies)
+    res.status(200).render('duckyPage', {
+      duckydata: data.postArray[num],
+      replies: data.postArray[num].replies
     })
+  }
 })
 
 app.post('/store', function(req, res, next){
@@ -39,7 +51,7 @@ app.post('/store', function(req, res, next){
     if (!err) {
       res.status(200).send()
     } else {
-      res.status(500).send("Erorr: error saving the ducky.")
+      res.status(500).send("Error: error saving the ducky.")
     }
   })
 })
@@ -56,14 +68,14 @@ app.post('/storeReply', function(req, res, next){
     if (!err) {
       res.status(200).send()
     } else {
-      res.status(500).send("Erorr: error saving the reply.")
+      res.status(500).send("Error: error saving the reply.")
     }
   })
 })
 
-// app.get('*', function (req, res) {
-//   //res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
-// });
+app.get('*', function (req, res) {
+  res.status(404).render('404');
+});
 
 app.listen(port, function () {
   console.log("== Server is listening on port", port)

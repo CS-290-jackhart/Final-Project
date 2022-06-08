@@ -133,6 +133,11 @@ button#add-content {
     width: 70%;
 }
 
+.ducky-link {
+    text-decoration: inherit;
+    color: inherit;
+}
+
 .ducky:hover {
     border-color: var(--main-bg-color);
     cursor: pointer;
@@ -173,10 +178,6 @@ button#add-content {
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 20px;
-}
-
-.ducky-text{
-
 }
 
 .text-hidden{
@@ -253,7 +254,7 @@ button#add-content {
     font-family: Arial, Helvetica, sans-serif;
     background-color: white;
     border-style: solid;
-    border-color: black;
+    border-color: white;
     border-radius: 10px;
     margin: 25px;
     padding: 10px;

@@ -1,17 +1,14 @@
 <main id="ducky-container">
     {{#each duckies}}
+        <a href="/posts/{{@index}}" class="ducky-link">
         {{> ducky}}
+        </a>
     {{/each}}
 </main>
 <div id="background">
 </div>
 <main id="button-container">
     <input type="text" id="searchbar" placeholder="Search Posts...">
-    <button type="button" id="go-back" class="hidden">
-        <p>
-            Go Back
-        </p>
-    </button>
     <button type="button" id="show-questions">
         <p>
             Sort By Questions
@@ -33,12 +30,6 @@
         </p>
     </button>
 </main>
-
-<button type="button" id="add-replies" class="hidden">
-    <p>
-        Add Reply
-    </p>
-</button>
 
 <main id="modal-container">
     <div id="modal-backdrop" class="hidden"></div>
@@ -76,36 +67,6 @@
         <div class="modal-footer">
             <button type="button" class="modal-cancel-button">Cancel</button>
             <button type="button" class="modal-accept-button">Create ducky</button>
-        </div>
-
-        </div>
-    </div>
-</main>
-
-<main id="modal-container">
-    <div id="modal-backdrop" class="hidden"></div>
-    <div id="create-reply-modal" class="hidden">
-        <div class="modal-dialog">
-
-        <div class="modal-header">
-            <h3>Create Reply</h3>
-            <button type="button" class="reply-modal-close-button">&times;</button>
-        </div>
-
-        <div class="modal-body">
-            <div class="reply-input-element">
-            <label for="reply-title-input">Reply Text</label>
-            <input type="text" id="reply-title-input">
-            </div>
-            <div class="reply-input-element">
-            <label for="reply-text-input">Author</label>
-            <textarea id="reply-text-input"></textarea>
-            </div>
-        </div>
-
-        <div class="modal-footer">
-            <button type="button" class="reply-modal-cancel-button">Cancel</button>
-            <button type="button" class="reply-modal-accept-button">Create reply</button>
         </div>
 
         </div>

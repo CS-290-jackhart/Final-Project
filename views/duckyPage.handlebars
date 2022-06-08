@@ -1,0 +1,54 @@
+<main id="ducky-container">
+    {{> fullducky duckydata}}
+    
+    <article class="response-container">
+        {{#each replies}}
+            {{> reply}}
+        {{/each}}
+    </article>
+
+
+</main>
+
+<main id="button-container">
+    <button type="button" id="go-back" onclick="location.href='/'">
+        <p>
+            Go Back
+        </p>
+    </button> 
+
+    <button type="button" id="add-replies">
+    <p>
+        Add Reply
+    </p>
+</main>
+
+<main id="modal-container">
+    <div id="modal-backdrop" class="hidden"></div>
+    <div id="create-reply-modal" class="hidden">
+        <div class="modal-dialog">
+
+        <div class="modal-header">
+            <h3>Create Reply</h3>
+            <button type="button" class="reply-modal-close-button">&times;</button>
+        </div>
+
+        <div class="modal-body">
+            <div class="reply-input-element">
+            <label for="reply-title-input">Reply Text</label>
+            <input type="text" id="reply-title-input">
+            </div>
+            <div class="reply-input-element">
+            <label for="reply-text-input">Author</label>
+            <textarea id="reply-text-input"></textarea>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="reply-modal-cancel-button">Cancel</button>
+            <button type="button" class="reply-modal-accept-button">Create reply</button>
+        </div>
+
+        </div>
+    </div>
+</main>

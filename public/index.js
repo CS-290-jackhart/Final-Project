@@ -11,21 +11,22 @@ for (let i = 0; i < getDuckys.length; i++) {
     duckyStorage.push(getDuckys[i])
 }
 
-let duckyPosts = document.getElementsByClassName('ducky')
-for (let i = 0; i < duckyPosts.length; i++) {
-    duckyPosts[i].addEventListener('click', showPost)
-}
-
 function getTimeStr() {
     let time = new Date()
     let minutes = time.getMinutes()
+    let hours = time.getHours()
 
     //format minutes
     if (minutes < 10) {
         minutes = "0" + minutes.toString()
     }
 
-    return time.getHours() + ":" + time.getMinutes()
+    if (hours > 12) {
+        hours = (hours - 12).toString()
+        console.log()
+    }
+
+    return hours + ":" + minutes
 }
 
 function searchDuckys() {
@@ -138,42 +139,6 @@ function hideButtons() {
     unhideReply.classList.remove('hidden')
 }
 
-function returnHome() {
-    let buttonContainer = document.getElementById('button-container')
-    for (let i = 0; i < buttonContainer.children.length; i++) {
-        if (!buttonContainer.children[i].classList.contains('hidden')) {
-            buttonContainer.children[i].classList.add('hidden')
-        } else {
-            buttonContainer.children[i].classList.remove('hidden')
-        }
-    }
-
-    let unhideReply = document.getElementById('add-replies')
-    unhideReply.classList.add('hidden')
-
-    addContent()
-}
-
-function showPost(event) {
-    //set any clicked buttons to unclicked
-    discussionsButton.classList.remove('clicked')
-    questionsButton.classList.remove('clicked')
-    tutorialsButton.classList.remove('clicked')
-
-    hideContent()
-
-    event.currentTarget.classList.remove("hidden")
-
-    let repliesContainer = event.currentTarget.nextSibling.nextSibling
-    repliesContainer.classList.remove("hidden")
-
-    let duckyText = event.currentTarget.children[0].children[2]
-    duckyText.classList.remove("hidden")
-
-    hideButtons()
-
-}
-
 function postDuckyHTML (ducky) {
     let duckyContainer = document.getElementById('ducky-container')
     duckyContainer.insertAdjacentHTML('afterbegin', ducky)
@@ -261,14 +226,7 @@ function replyPost(event) {
     let userTime = getTimeStr()
 
     if ((textFieldContent != '') && (titleFieldContent != '')) {
-        let duckyContainer = document.getElementById('ducky-container')
-        let position = null
-        for (let i = 0; i < duckyContainer.children.length; i++) {
-            if (!duckyContainer.children[i].classList.contains('hidden') && duckyContainer.children[i].classList.contains('ducky')) {
-                position = i/2
-            }
-        }
-        console.log("== Position:", position)
+        let position = parseInt(window.location.href.substring(28))
         let reply = Handlebars.templates.reply({
             replyText: titleField.value,
             replyAuthor: textField.value,
@@ -289,8 +247,7 @@ function replyPost(event) {
         })
 
         let replyContainer = document.getElementsByClassName('response-container')
-        console.log(replyContainer)
-        replyContainer[position].insertAdjacentHTML('beforeend', reply)
+        replyContainer[0].insertAdjacentHTML('beforeend', reply)
     }
 
     toggleModalReply()
@@ -315,39 +272,55 @@ function toggleModalReply() {
 //wait until dom is loaded to do all this stuff
 window.addEventListener('DOMContentLoaded', () => {
 
-    //Search bar
-    document.getElementById('searchbar').addEventListener('input', searchDuckys)
+    let searchbar = document.getElementById('searchbar')
+    if (searchbar)
+        searchbar.addEventListener('input', searchDuckys)
 
-    //Create Post Button
-    document.getElementById("add-content").addEventListener('click', toggleModal)
+    let createpost = document.getElementById("add-content")
+    if (createpost)
+        createpost.addEventListener('click', toggleModal)
 
     //Modal close and cancel
-    document.getElementsByClassName('modal-cancel-button')[0].addEventListener('click', toggleModal)
-    document.getElementsByClassName('modal-close-button')[0].addEventListener('click', toggleModal)
+    let modalcancel = document.getElementsByClassName('modal-cancel-button')
+    if (modalcancel[0])
+        modalcancel[0].addEventListener('click', toggleModal)
+
+    let modalclose = document.getElementsByClassName('modal-close-button')
+    if (modalclose[0])
+        modalclose[0].addEventListener('click', toggleModal)
 
     //Sorting buttons
-    document.getElementById('show-discussions').addEventListener('click', sortDuckys)
-    document.getElementById('show-questions').addEventListener('click', sortDuckys)
-    document.getElementById('show-tutorials').addEventListener('click', sortDuckys)
+    if (discussionsButton)
+        discussionsButton.addEventListener('click', sortDuckys)
 
-    document.getElementById('go-back').addEventListener('click', returnHome)
+    if (questionsButton)
+        questionsButton.addEventListener('click', sortDuckys)
+
+    if (tutorialsButton)
+        tutorialsButton.addEventListener('click', sortDuckys)
 
     let submitPostButton = document.getElementsByClassName('modal-accept-button')
-    for (let i = 0; i < submitPostButton.length; i++) {
-        submitPostButton[i].addEventListener('click', publishPost)
-    }
+    if (submitPostButton)
+        for (let i = 0; i < submitPostButton.length; i++) {
+            submitPostButton[i].addEventListener('click', publishPost)
+        }
 
     let replyModal = document.getElementById('add-replies')
-    replyModal.addEventListener('click', toggleModalReply)
+    console.log('here')
+    if(replyModal)
+        replyModal.addEventListener('click', toggleModalReply)
 
     let closeButton2 = document.getElementsByClassName('reply-modal-cancel-button')
-    closeButton2[0].addEventListener('click', toggleModalReply)
+    if(closeButton2[0])
+        closeButton2[0].addEventListener('click', toggleModalReply)
 
     let xButton2 = document.getElementsByClassName('reply-modal-close-button')
-    xButton2[0].addEventListener('click', toggleModalReply)
+    if(xButton2[0])
+        xButton2[0].addEventListener('click', toggleModalReply)
 
     let submitReplyButton = document.getElementsByClassName("reply-modal-accept-button")
-    for (let i = 0; i < submitReplyButton.length; i++) {
-        submitReplyButton[i].addEventListener('click', replyPost)
-    }
+    if(submitReplyButton)
+        for (let i = 0; i < submitReplyButton.length; i++) {
+            submitReplyButton[i].addEventListener('click', replyPost)
+        }
 })
