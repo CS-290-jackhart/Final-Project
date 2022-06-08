@@ -217,6 +217,14 @@ function showPost(event) {
     questionsButton.classList.remove('clicked')
     tutorialsButton.classList.remove('clicked')
 
+    //set any clicked buttons to unclicked
+    var discussionsButton = document.getElementById('show-discussions')
+    var questionsButton = document.getElementById('show-questions')
+    var tutorialsButton = document.getElementById('show-tutorials')
+    discussionsButton.classList.remove('clicked')
+    questionsButton.classList.remove('clicked')
+    tutorialsButton.classList.remove('clicked')
+
     hideContent()
 
     event.currentTarget.classList.remove("hidden")
