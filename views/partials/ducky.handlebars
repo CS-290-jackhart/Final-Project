@@ -9,19 +9,6 @@
 </article> 
 <article class="response-container hidden">
     {{#each replies}}
-    <article class="response">
-    
-            <div class="response-content">
-            <p class="response-text">
-                {{replyText}}
-            </p>
-            <p class="response-author">
-                {{replyAuthor}}
-            </p>
-            <p class="response-time">
-                {{replyTime}}
-            </p>
-            </div>
-    </article>
+        {{> reply}}
     {{/each}}
 </article>

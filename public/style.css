@@ -88,8 +88,9 @@ button#add-content {
 }
 
 #add-replies{
+    justify-content: center;
     height: 12%;
-    font-size: 160%;
+    font-size: 150%;
     font-weight: bold;
     border-style: solid;
     border-color: var(--button-bg-color);
@@ -224,6 +225,7 @@ button#add-content {
     margin-bottom: 10px;
     width: 70%;
     margin-right: 0px;
+    margin-right: 0px;
 }
 
 .post-text {
@@ -302,8 +304,18 @@ button#add-content {
     overflow: scroll;
 }
 
+#create-reply-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1010;
+    overflow: scroll;
+}
+
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .modal-header {
@@ -337,6 +349,13 @@ button#add-content {
     margin: 10px 0;
 }
 
+.reply-input-element {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
 .ducky-input-element label {
     font-weight: 600;
     flex: 1 75px;
@@ -344,7 +363,18 @@ button#add-content {
     margin-bottom: 10px
 }
 
+.reply-input-element label {
+    font-weight: 600;
+    flex: 1 75px;
+    margin-right: 10px;
+    margin-bottom: 10px
+}
+
 .ducky-input-element textarea {
+    min-height: 64px;
+}
+
+.reply-input-element textarea {
     min-height: 64px;
 }
 
@@ -358,9 +388,27 @@ button#add-content {
     padding: 0;
     cursor: pointer;
 }
+.reply-modal-close-button {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 24px;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
 
 .ducky-input-element input,
 .ducky-input-element textarea {
+    flex: 6 200px;
+    padding: 8px;
+    font-size: 20px;
+    border: 1px solid #aaa;
+}
+
+.reply-input-element input,
+.reply-input-element textarea {
     flex: 6 200px;
     padding: 8px;
     font-size: 20px;
@@ -394,6 +442,20 @@ button#add-content {
 }
 
 .modal-footer .modal-accept-button:hover {
+    background-color: #FFE882;
+    color: #2e818b;
+}
+
+.modal-footer .reply-modal-cancel-button:hover {
+    background-color: #eee;
+}
+
+.modal-footer .reply-modal-accept-button {
+    background-color: #46B7C3;
+    color: #fff;
+}
+
+.modal-footer .reply-modal-accept-button:hover {
     background-color: #FFE882;
     color: #2e818b;
 }

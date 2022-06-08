@@ -4,6 +4,7 @@ var exphbs = require('express-handlebars')
 var fs = require('fs')
 
 var data = require("./data.json")
+// var tempData = data.postArray.reverse()
 
 var app = express()
 
@@ -18,13 +19,12 @@ app.use(express.static('public'))
 
 app.get('/', (req, res) => {
     res.status(200).render('mainPage', {
-        duckies: data
+        duckies: data.postArray
     })
 })
 
 app.post('/store', function(req, res, next){
-  console.log("req.body", req.body)
-  data.push({
+  data.postArray.unshift({
     title: req.body.title,
     text: req.body.text,
     time: req.body.time,
@@ -32,6 +32,19 @@ app.post('/store', function(req, res, next){
     label: req.body.label,
     type:  req.body.type,
     replies: []
+  })
+  fs.writeFile("./data.json",
+  JSON.stringify(data, null, 2),
+  function(err){
+
+  })
+})
+
+app.post('/storeReply', function(req, res, next){
+  data.postArray[req.body.position].replies.push({
+    replyText: req.body.replyText,
+    replyAuthor: req.body.replyAuthor,
+    replyTime: req.body.replyTime
   })
   fs.writeFile("./data.json",
   JSON.stringify(data, null, 2),
