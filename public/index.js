@@ -34,7 +34,7 @@ function searchDuckys() {
     userInput = userInput.toLowerCase()
     let duckyCollection = document.getElementsByClassName('ducky')
 
-    console.log('ducky content:', duckyStorage[i])
+    //console.log('ducky content:', duckyStorage[i])
 
     for (let i = 0; i < duckyCollection.length; i++) {
         if (!duckyStorage[i].textContent.toLowerCase().includes(userInput)) {
