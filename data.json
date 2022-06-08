@@ -48,7 +48,7 @@
     {
       "title": "How to write a for loop in Javascript!",
       "type": "tutorial",
-      "text": "For loops in javascript are quite easy, we can write one by typing as follows: for(int i=0;i<6;i++){} Inside of those curly brackets you would put the code that would execute inside the loop.",
+      "text": "For loops in javascript are quite easy, we can write one by typing as follows: for(let i = 0; i < 6; i++){} Inside of those curly brackets you would put the code that would execute inside the loop.",
       "label": "TUTORIAL",
       "author": "Ethan Hardey",
       "time": "13:42",
