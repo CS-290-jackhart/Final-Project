@@ -1,242 +1,77 @@
 {
   "postArray": [
     {
-      "title": "Le Gaming 9",
-      "text": "please work ",
-      "time": "19:7",
-      "author": "bruh",
+      "title": "How to to a Hello World program!",
+      "text": "The classic Hello World program is quite simple, even for beginners, simply write console.log(Hello World) with Hello World surrounded by quotes.",
+      "time": "19:27",
+      "author": "Ian Backus",
       "label": "TUTORIAL",
       "type": "tutorial",
       "replies": [
         {
-          "replyText": "boom boom booom boom",
-          "replyAuthor": "im in your walls",
-          "replyTime": "19:7"
-        },
-        {
-          "replyText": "fewfewfew",
-          "replyAuthor": "fewfewfe",
-          "replyTime": "12:42"
-        },
-        {
-          "replyText": "fewfewfew",
-          "replyAuthor": "fewfewfe",
-          "replyTime": "12:42"
-        },
-        {
-          "replyText": "test",
-          "replyAuthor": "test",
-          "replyTime": "12:50"
+          "replyText": "Thanks, that was really helpful",
+          "replyAuthor": "Also Ian Backus",
+          "replyTime": "19:30"
         }
       ]
     },
     {
-      "title": "Le gaming 8",
-      "type": "discussion",
-      "text": "Based and Red Pilled Sample Text",
-      "label": "DISCUSSION",
-      "author": "Ethan Hardey",
-      "time": "12:42",
-      "replies": [
-        {
-          "replyAuthor": "Ian Backus",
-          "replyTime": "1:26",
-          "replyText": "It's honestly so easy bro"
-        },
-        {
-          "replyAuthor": "Ian Backus",
-          "replyTime": "1:26",
-          "replyText": "It's honestly so easy bro"
-        },
-        {
-          "replyAuthor": "Ian Backus",
-          "replyTime": "1:26",
-          "replyText": "It's honestly so easy bro"
-        }
-      ]
-    },
-    {
-      "title": "Le gaming 7",
-      "type": "discussion",
-      "text": "Based and Red Pilled Sample Text",
-      "label": "DISCUSSION",
-      "author": "Ethan Hardey",
-      "time": "12:42",
-      "replies": [
-        {
-          "replyAuthor": "Ian Backus",
-          "replyTime": "1:26",
-          "replyText": "It's honestly so easy bro"
-        },
-        {
-          "replyAuthor": "Ian Backus",
-          "replyTime": "1:26",
-          "replyText": "It's honestly so easy bro"
-        },
-        {
-          "replyAuthor": "Ian Backus",
-          "replyTime": "1:26",
-          "replyText": "It's honestly so easy bro"
-        },
-        {
-          "replyText": "123123",
-          "replyAuthor": "12312312",
-          "replyTime": "19:3"
-        }
-      ]
-    },
-    {
-      "title": "Le gaming 6",
-      "type": "discussion",
-      "text": "Based and Red Pilled Sample Text",
-      "label": "DISCUSSION",
-      "author": "Ethan Hardey",
-      "time": "12:42",
-      "replies": [
-        {
-          "replyAuthor": "Ian Backus",
-          "replyTime": "1:26",
-          "replyText": "It's honestly so easy bro"
-        },
-        {
-          "replyAuthor": "Ian Backus",
-          "replyTime": "1:26",
-          "replyText": "It's honestly so easy bro"
-        },
-        {
-          "replyAuthor": "Ian Backus",
-          "replyTime": "1:26",
-          "replyText": "It's honestly so easy bro"
-        }
-      ]
-    },
-    {
-      "title": "Le gaming 5",
+      "title": "Variable Question",
       "type": "question",
-      "text": "Based and Red Pilled Sample Text",
+      "text": "How do I declare a variable in javascript?",
       "label": "QUESTION",
       "author": "Ethan Hardey",
-      "time": "12:42",
+      "time": "17:30",
       "replies": [
         {
-          "replyAuthor": "Ian Backus",
-          "replyTime": "1:26",
-          "replyText": "It's honestly so easy bro"
-        },
-        {
-          "replyAuthor": "Ian Backus",
-          "replyTime": "1:26",
-          "replyText": "It's honestly so easy bro"
-        },
-        {
-          "replyAuthor": "Ian Backus",
-          "replyTime": "1:26",
-          "replyText": "It's honestly so easy bro"
-        },
-        {
-          "replyText": "shit faced",
-          "replyAuthor": "bruh",
-          "replyTime": "19:9"
+          "replyAuthor": "Jack Hart",
+          "replyTime": "17:41",
+          "replyText": "Type var variableName = 10"
         }
       ]
     },
     {
-      "title": "Le gaming 4",
+      "title": "Compiler Question",
       "type": "question",
-      "text": "Based and Red Pilled Sample Text",
+      "text": "How do compilers work?",
       "label": "QUESTION",
-      "author": "Ethan Hardey",
-      "time": "12:42",
+      "author": "Jack Hart",
+      "time": "15:15",
       "replies": [
         {
           "replyAuthor": "Ian Backus",
-          "replyTime": "1:26",
-          "replyText": "It's honestly so easy bro"
-        },
-        {
-          "replyAuthor": "Ian Backus",
-          "replyTime": "1:26",
-          "replyText": "It's honestly so easy bro"
-        },
-        {
-          "replyAuthor": "Ian Backus",
-          "replyTime": "1:26",
-          "replyText": "It's honestly so easy bro"
+          "replyTime": "16:01",
+          "replyText": "A compiler translates the source code in a program into machine code so the computer can understand it."
         }
       ]
     },
     {
-      "title": "Le gaming 3",
-      "type": "question",
-      "text": "Based and Red Pilled Sample Text",
-      "label": "QUESTION",
-      "author": "Ethan Hardey",
-      "time": "12:42",
-      "replies": [
-        {
-          "replyAuthor": "Ian Backus",
-          "replyTime": "1:26",
-          "replyText": "It's honestly so easy bro"
-        },
-        {
-          "replyAuthor": "Ian Backus",
-          "replyTime": "1:26",
-          "replyText": "It's honestly so easy bro"
-        },
-        {
-          "replyAuthor": "Ian Backus",
-          "replyTime": "1:26",
-          "replyText": "It's honestly so easy bro"
-        }
-      ]
-    },
-    {
-      "title": "Le gaming 2",
+      "title": "How to write a for loop in Javascript!",
       "type": "tutorial",
-      "text": "Based and Red Pilled Sample Text",
+      "text": "For loops in javascript are quite easy, we can write one by typing as follows: for(int i=0;i<6;i++){} Inside of those curly brackets you would put the code that would execute inside the loop.",
       "label": "TUTORIAL",
       "author": "Ethan Hardey",
-      "time": "12:42",
+      "time": "13:42",
       "replies": [
         {
           "replyAuthor": "Ian Backus",
-          "replyTime": "1:26",
-          "replyText": "It's honestly so easy bro"
-        },
-        {
-          "replyAuthor": "Ian Backus",
-          "replyTime": "1:26",
-          "replyText": "It's honestly so easy bro"
-        },
-        {
-          "replyAuthor": "Ian Backus",
-          "replyTime": "1:26",
-          "replyText": "It's honestly so easy bro"
+          "replyTime": "13:50",
+          "replyText": "Thank you so much."
         }
       ]
     },
     {
-      "title": "Le gaming 1",
-      "type": "tutorial",
-      "text": "Based and Red Pilled Sample Text",
-      "label": "TUTORIAL",
-      "author": "Ethan Hardey",
+      "title": "I think Pascal is the best language",
+      "type": "discussion",
+      "text": "It's obvious really, Pascal combines readability with the teaching of good habits, making it the best language ever created both for veterans and beginner programmers.",
+      "label": "DISCUSSION",
+      "author": "Ian Backus",
       "time": "12:42",
       "replies": [
         {
-          "replyAuthor": "Ian Backus",
+          "replyAuthor": "Ethan Hardey",
           "replyTime": "1:26",
-          "replyText": "It's honestly so easy bro"
-        },
-        {
-          "replyAuthor": "Ian Backus",
-          "replyTime": "1:26",
-          "replyText": "It's honestly so easy bro"
-        },
-        {
-          "replyAuthor": "Ian Backus",
-          "replyTime": "1:26",
-          "replyText": "It's honestly so easy bro"
+          "replyText": "This man is spitting facts."
         }
       ]
     }
