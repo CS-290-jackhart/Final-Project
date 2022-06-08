@@ -1,227 +1,227 @@
 [
-    {
-        "title":"Le gaming",
-        "type":"tutorial",
-        "text": "Based and Red Pilled Sample Text",
-        "label": "TUTORIAL",
-        "author": "Ethan Hardey",
-        "time": "12:42",
-        "replies": [
-            {
-                "replyAuthor": "Ian Backus",
-                "replyTime": "1:26",
-                "replyText": "It's honestly so easy bro"
-            },
-            {
-                "replyAuthor": "Ian Backus",
-                "replyTime": "1:26",
-                "replyText": "It's honestly so easy bro"
-            },
-            {
-                "replyAuthor": "Ian Backus",
-                "replyTime": "1:26",
-                "replyText": "It's honestly so easy bro"
-            }
-        ]
-    },
-    {   
-        "title":"Le gaming",
-        "type":"tutorial",
-        "text": "Based and Red Pilled Sample Text",
-        "label": "TUTORIAL",
-        "author": "Ethan Hardey",
-        "time": "12:42",
-        "replies": [
-            {
-                "replyAuthor": "Ian Backus",
-                "replyTime": "1:26",
-                "replyText": "It's honestly so easy bro"
-            },
-            {
-                "replyAuthor": "Ian Backus",
-                "replyTime": "1:26",
-                "replyText": "It's honestly so easy bro"
-            },
-            {
-                "replyAuthor": "Ian Backus",
-                "replyTime": "1:26",
-                "replyText": "It's honestly so easy bro"
-            }
-        ]
-    },
-    {   
-        "title":"Le gaming",
-        "type":"tutorial",
-        "text": "Based and Red Pilled Sample Text",
-        "label": "TUTORIAL",
-        "author": "Ethan Hardey",
-        "time": "12:42",
-        "replies": [
-            {
-                "replyAuthor": "Ian Backus",
-                "replyTime": "1:26",
-                "replyText": "It's honestly so easy bro"
-            },
-            {
-                "replyAuthor": "Ian Backus",
-                "replyTime": "1:26",
-                "replyText": "It's honestly so easy bro"
-            },
-            {
-                "replyAuthor": "Ian Backus",
-                "replyTime": "1:26",
-                "replyText": "It's honestly so easy bro"
-            }
-        ]
-    },
-    {  
-        "title":"Le gaming", 
-        "type":"question",
-        "text": "Based and Red Pilled Sample Text",
-        "label": "QUESTION",
-        "author": "Ethan Hardey",
-        "time": "12:42",
-        "replies": [
-            {
-                "replyAuthor": "Ian Backus",
-                "replyTime": "1:26",
-                "replyText": "It's honestly so easy bro"
-            },
-            {
-                "replyAuthor": "Ian Backus",
-                "replyTime": "1:26",
-                "replyText": "It's honestly so easy bro"
-            },
-            {
-                "replyAuthor": "Ian Backus",
-                "replyTime": "1:26",
-                "replyText": "It's honestly so easy bro"
-            }
-        ]
-    },
-    {   
-        "title":"Le gaming",
-        "type":"question",
-        "text": "Based and Red Pilled Sample Text",
-        "label": "QUESTION",
-        "author": "Ethan Hardey",
-        "time": "12:42",
-        "replies": [
-            {
-                "replyAuthor": "Ian Backus",
-                "replyTime": "1:26",
-                "replyText": "It's honestly so easy bro"
-            },
-            {
-                "replyAuthor": "Ian Backus",
-                "replyTime": "1:26",
-                "replyText": "It's honestly so easy bro"
-            },
-            {
-                "replyAuthor": "Ian Backus",
-                "replyTime": "1:26",
-                "replyText": "It's honestly so easy bro"
-            }
-        ]
-    },
-    {   
-        "title":"Le gaming",
-        "type":"question",
-        "text": "Based and Red Pilled Sample Text",
-        "label": "QUESTION",
-        "author": "Ethan Hardey",
-        "time": "12:42",
-        "replies": [
-            {
-                "replyAuthor": "Ian Backus",
-                "replyTime": "1:26",
-                "replyText": "It's honestly so easy bro"
-            },
-            {
-                "replyAuthor": "Ian Backus",
-                "replyTime": "1:26",
-                "replyText": "It's honestly so easy bro"
-            },
-            {
-                "replyAuthor": "Ian Backus",
-                "replyTime": "1:26",
-                "replyText": "It's honestly so easy bro"
-            }
-        ]
-    },
-    {
-        "title":"Le gaming",
-        "type":"discussion",
-        "text": "Based and Red Pilled Sample Text",
-        "label": "DISCUSSION",
-        "author": "Ethan Hardey",
-        "time": "12:42",
-        "replies": [
-            {
-                "replyAuthor": "Ian Backus",
-                "replyTime": "1:26",
-                "replyText": "It's honestly so easy bro"
-            },
-            {
-                "replyAuthor": "Ian Backus",
-                "replyTime": "1:26",
-                "replyText": "It's honestly so easy bro"
-            },
-            {
-                "replyAuthor": "Ian Backus",
-                "replyTime": "1:26",
-                "replyText": "It's honestly so easy bro"
-            }
-        ]
-    },
-    {
-        "title":"Le gaming",
-        "type":"discussion",
-        "text": "Based and Red Pilled Sample Text",
-        "label": "DISCUSSION",
-        "author": "Ethan Hardey",
-        "time": "12:42",
-        "replies": [
-            {
-                "replyAuthor": "Ian Backus",
-                "replyTime": "1:26",
-                "replyText": "It's honestly so easy bro"
-            },
-            {
-                "replyAuthor": "Ian Backus",
-                "replyTime": "1:26",
-                "replyText": "It's honestly so easy bro"
-            },
-            {
-                "replyAuthor": "Ian Backus",
-                "replyTime": "1:26",
-                "replyText": "It's honestly so easy bro"
-            }
-        ]
-    },
-    {
-        "title":"Le gaming",
-        "type":"discussion",
-        "text": "Based and Red Pilled Sample Text",
-        "label": "DISCUSSION",
-        "author": "Ethan Hardey",
-        "time": "12:42",
-        "replies": [
-            {
-                "replyAuthor": "Ian Backus",
-                "replyTime": "1:26",
-                "replyText": "It's honestly so easy bro"
-            },
-            {
-                "replyAuthor": "Ian Backus",
-                "replyTime": "1:26",
-                "replyText": "It's honestly so easy bro"
-            },
-            {
-                "replyAuthor": "Ian Backus",
-                "replyTime": "1:26",
-                "replyText": "It's honestly so easy bro"
-            }
-        ]
-    }
+  {
+    "title": "Le gaming",
+    "type": "tutorial",
+    "text": "Based and Red Pilled Sample Text",
+    "label": "TUTORIAL",
+    "author": "Ethan Hardey",
+    "time": "12:42",
+    "replies": [
+      {
+        "replyAuthor": "Ian Backus",
+        "replyTime": "1:26",
+        "replyText": "It's honestly so easy bro"
+      },
+      {
+        "replyAuthor": "Ian Backus",
+        "replyTime": "1:26",
+        "replyText": "It's honestly so easy bro"
+      },
+      {
+        "replyAuthor": "Ian Backus",
+        "replyTime": "1:26",
+        "replyText": "It's honestly so easy bro"
+      }
+    ]
+  },
+  {
+    "title": "Le gaming",
+    "type": "tutorial",
+    "text": "Based and Red Pilled Sample Text",
+    "label": "TUTORIAL",
+    "author": "Ethan Hardey",
+    "time": "12:42",
+    "replies": [
+      {
+        "replyAuthor": "Ian Backus",
+        "replyTime": "1:26",
+        "replyText": "It's honestly so easy bro"
+      },
+      {
+        "replyAuthor": "Ian Backus",
+        "replyTime": "1:26",
+        "replyText": "It's honestly so easy bro"
+      },
+      {
+        "replyAuthor": "Ian Backus",
+        "replyTime": "1:26",
+        "replyText": "It's honestly so easy bro"
+      }
+    ]
+  },
+  {
+    "title": "Le gaming",
+    "type": "tutorial",
+    "text": "Based and Red Pilled Sample Text",
+    "label": "TUTORIAL",
+    "author": "Ethan Hardey",
+    "time": "12:42",
+    "replies": [
+      {
+        "replyAuthor": "Ian Backus",
+        "replyTime": "1:26",
+        "replyText": "It's honestly so easy bro"
+      },
+      {
+        "replyAuthor": "Ian Backus",
+        "replyTime": "1:26",
+        "replyText": "It's honestly so easy bro"
+      },
+      {
+        "replyAuthor": "Ian Backus",
+        "replyTime": "1:26",
+        "replyText": "It's honestly so easy bro"
+      }
+    ]
+  },
+  {
+    "title": "Le gaming",
+    "type": "question",
+    "text": "Based and Red Pilled Sample Text",
+    "label": "QUESTION",
+    "author": "Ethan Hardey",
+    "time": "12:42",
+    "replies": [
+      {
+        "replyAuthor": "Ian Backus",
+        "replyTime": "1:26",
+        "replyText": "It's honestly so easy bro"
+      },
+      {
+        "replyAuthor": "Ian Backus",
+        "replyTime": "1:26",
+        "replyText": "It's honestly so easy bro"
+      },
+      {
+        "replyAuthor": "Ian Backus",
+        "replyTime": "1:26",
+        "replyText": "It's honestly so easy bro"
+      }
+    ]
+  },
+  {
+    "title": "Le gaming",
+    "type": "question",
+    "text": "Based and Red Pilled Sample Text",
+    "label": "QUESTION",
+    "author": "Ethan Hardey",
+    "time": "12:42",
+    "replies": [
+      {
+        "replyAuthor": "Ian Backus",
+        "replyTime": "1:26",
+        "replyText": "It's honestly so easy bro"
+      },
+      {
+        "replyAuthor": "Ian Backus",
+        "replyTime": "1:26",
+        "replyText": "It's honestly so easy bro"
+      },
+      {
+        "replyAuthor": "Ian Backus",
+        "replyTime": "1:26",
+        "replyText": "It's honestly so easy bro"
+      }
+    ]
+  },
+  {
+    "title": "Le gaming",
+    "type": "question",
+    "text": "Based and Red Pilled Sample Text",
+    "label": "QUESTION",
+    "author": "Ethan Hardey",
+    "time": "12:42",
+    "replies": [
+      {
+        "replyAuthor": "Ian Backus",
+        "replyTime": "1:26",
+        "replyText": "It's honestly so easy bro"
+      },
+      {
+        "replyAuthor": "Ian Backus",
+        "replyTime": "1:26",
+        "replyText": "It's honestly so easy bro"
+      },
+      {
+        "replyAuthor": "Ian Backus",
+        "replyTime": "1:26",
+        "replyText": "It's honestly so easy bro"
+      }
+    ]
+  },
+  {
+    "title": "Le gaming",
+    "type": "discussion",
+    "text": "Based and Red Pilled Sample Text",
+    "label": "DISCUSSION",
+    "author": "Ethan Hardey",
+    "time": "12:42",
+    "replies": [
+      {
+        "replyAuthor": "Ian Backus",
+        "replyTime": "1:26",
+        "replyText": "It's honestly so easy bro"
+      },
+      {
+        "replyAuthor": "Ian Backus",
+        "replyTime": "1:26",
+        "replyText": "It's honestly so easy bro"
+      },
+      {
+        "replyAuthor": "Ian Backus",
+        "replyTime": "1:26",
+        "replyText": "It's honestly so easy bro"
+      }
+    ]
+  },
+  {
+    "title": "Le gaming",
+    "type": "discussion",
+    "text": "Based and Red Pilled Sample Text",
+    "label": "DISCUSSION",
+    "author": "Ethan Hardey",
+    "time": "12:42",
+    "replies": [
+      {
+        "replyAuthor": "Ian Backus",
+        "replyTime": "1:26",
+        "replyText": "It's honestly so easy bro"
+      },
+      {
+        "replyAuthor": "Ian Backus",
+        "replyTime": "1:26",
+        "replyText": "It's honestly so easy bro"
+      },
+      {
+        "replyAuthor": "Ian Backus",
+        "replyTime": "1:26",
+        "replyText": "It's honestly so easy bro"
+      }
+    ]
+  },
+  {
+    "title": "Le gaming",
+    "type": "discussion",
+    "text": "Based and Red Pilled Sample Text",
+    "label": "DISCUSSION",
+    "author": "Ethan Hardey",
+    "time": "12:42",
+    "replies": [
+      {
+        "replyAuthor": "Ian Backus",
+        "replyTime": "1:26",
+        "replyText": "It's honestly so easy bro"
+      },
+      {
+        "replyAuthor": "Ian Backus",
+        "replyTime": "1:26",
+        "replyText": "It's honestly so easy bro"
+      },
+      {
+        "replyAuthor": "Ian Backus",
+        "replyTime": "1:26",
+        "replyText": "It's honestly so easy bro"
+      }
+    ]
+  }
 ]
