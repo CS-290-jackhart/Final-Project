@@ -1,27 +1,41 @@
 
-var getDuckys = document.getElementsByClassName('ducky')
-var duckyStorage = []
+let getDuckys = document.getElementsByClassName('ducky')
+let duckyStorage = []
 
-duckyStoring()
-updatePost()
+let duckyCollection = document.getElementsByClassName('ducky')
+let discussionsButton = document.getElementById('show-discussions')
+let questionsButton = document.getElementById('show-questions')
+let tutorialsButton = document.getElementById('show-tutorials')
 
-function duckyStoring() {
-    duckyStorage = []
-    for (var i = 0; i < getDuckys.length; i++) {
-        duckyStorage.push(getDuckys[i])
+for (let i = 0; i < getDuckys.length; i++) {
+    duckyStorage.push(getDuckys[i])
+}
+
+let duckyPosts = document.getElementsByClassName('ducky')
+for (let i = 0; i < duckyPosts.length; i++) {
+    duckyPosts[i].addEventListener('click', showPost)
+}
+
+function getTimeStr() {
+    let time = new Date()
+    let minutes = time.getMinutes()
+
+    //format minutes
+    if (minutes < 10) {
+        minutes = "0" + minutes.toString()
     }
 
-    console.log("Goofy ahh shit >>", duckyStorage)
+    return time.getHours() + ":" + time.getMinutes()
 }
 
 function searchDuckys() {
-    var userInput = document.getElementById("searchbar").value
+    let userInput = document.getElementById("searchbar").value
     userInput = userInput.toLowerCase()
-    var duckyCollection = document.getElementsByClassName('ducky')
+    let duckyCollection = document.getElementsByClassName('ducky')
 
     console.log('ducky content:', duckyStorage[i])
 
-    for (var i = 0; i < duckyCollection.length; i++) {
+    for (let i = 0; i < duckyCollection.length; i++) {
         if (!duckyStorage[i].textContent.toLowerCase().includes(userInput)) {
             duckyCollection[i].classList.add('hidden')
         } else {
@@ -30,21 +44,15 @@ function searchDuckys() {
     }
 }
 
-var duckySearch = document.getElementById('searchbar')
-duckySearch.addEventListener('input', searchDuckys)
-
 function toggleModal() {
-    var duckyModal = document.getElementById('create-ducky-modal')
-    var duckyBackdrop = document.getElementById('modal-backdrop')
+    let duckyModal = document.getElementById('create-ducky-modal')
+    let duckyBackdrop = document.getElementById('modal-backdrop')
 
     duckyModal.classList.toggle('hidden')
     duckyBackdrop.classList.toggle('hidden')
 
     clearModal()
 }
-
-var createPost = document.getElementById("add-content")
-createPost.addEventListener('click', toggleModal)
 
 function clearModal() {
     document.getElementById('ducky-text-input').value = ""
@@ -53,106 +61,59 @@ function clearModal() {
     document.getElementById('ducky-title-input').value = ""
 }
 
-
-var closeButton = document.getElementsByClassName('modal-cancel-button')
-closeButton[0].addEventListener('click', toggleModal)
-
-var xButton = document.getElementsByClassName('modal-close-button')
-xButton[0].addEventListener('click', toggleModal)
+function filterDuckies(element, type) {
+    if (element.classList.contains('ducky') && element.classList.contains(type)) {
+        element.classList.remove('hidden')
+    } else {
+        element.classList.add('hidden')
+    }
+}
 
 function sortDuckys(event) {
-    var duckyCollection = document.getElementsByClassName('ducky')
-    var discussionsButton = document.getElementById('show-discussions')
-    var questionsButton = document.getElementById('show-questions')
-    var tutorialsButton = document.getElementById('show-tutorials')
 
-
-    //if they clicked the discussions button, but it was already clicked
-    if ((event.currentTarget.id === 'show-discussions') && (discussionsButton.classList.value === 'clicked')) {
+    if (event.currentTarget.classList.value == 'clicked') {
         //clear all current sorted elements prior to sorting
-        for (var k = 0; k < duckyCollection.length; k++) {
+        for (let k = 0; k < duckyCollection.length; k++) {
             duckyCollection[k].classList.remove('hidden') // duckyCollection[k].classList.add('hidden')
         }
+
         //set the button to unclicked
+        event.currentTarget.classList.remove('clicked')
+    } else {
         discussionsButton.classList.remove('clicked')
-    }
-    else if ((event.currentTarget.id === 'show-questions') && (questionsButton.classList.value === 'clicked')) {
-        //clear all current sorted elements prior to sorting
-        for (var k = 0; k < duckyCollection.length; k++) {
-            duckyCollection[k].classList.remove('hidden')
-        }
-        //set the button to unclicked
         questionsButton.classList.remove('clicked')
-    }
-    else if ((event.currentTarget.id === 'show-tutorials') && (tutorialsButton.classList.value === 'clicked')) {
-        //clear all current sorted elements prior to sorting
-        for (var k = 0; k < duckyCollection.length; k++) {
-            duckyCollection[k].classList.remove('hidden')
-        }
-        //set the button to unclicked
         tutorialsButton.classList.remove('clicked')
-    }
-    else {
-        for (var i = 0; i < duckyCollection.length; i++) {
+
+        for (let i = 0; i < duckyCollection.length; i++) {
             if (event.currentTarget.id === 'show-discussions') {
                 discussionsButton.classList.add('clicked')
-                questionsButton.classList.remove('clicked')
-                tutorialsButton.classList.remove('clicked')
-                console.log("Showing discussions")
-                if ((duckyCollection[i].classList.contains('ducky')) && (duckyCollection[i].classList.contains('discussion'))) {
-                    duckyCollection[i].classList.remove('hidden')
-                }
-                else {
-                    duckyCollection[i].classList.add('hidden')
-                }
+                filterDuckies(duckyCollection[i], 'discussion')
+
             } else if (event.currentTarget.id === 'show-questions') {
                 questionsButton.classList.add('clicked')
-                discussionsButton.classList.remove('clicked')
-                tutorialsButton.classList.remove('clicked')
-                console.log("Showing questions")
-                if ((duckyCollection[i].classList.contains('ducky')) && (duckyCollection[i].classList.contains('question'))) {
-                    duckyCollection[i].classList.remove('hidden')
-                } else {
-                    duckyCollection[i].classList.add('hidden')
-                }
+                filterDuckies(duckyCollection[i], 'question')
+
             } else if (event.currentTarget.id === 'show-tutorials') {
                 tutorialsButton.classList.add('clicked')
-                questionsButton.classList.remove('clicked')
-                discussionsButton.classList.remove('clicked')
-                console.log("Showing tutorials")
-                if ((duckyCollection[i].classList.contains('ducky')) && (duckyCollection[i].classList.contains('tutorial'))) {
-                    duckyCollection[i].classList.remove('hidden')
-                } else {
-                    duckyCollection[i].classList.add('hidden')
-                }
+                filterDuckies(duckyCollection[i], 'tutorial')
             }
         }
     }
-
 }
 
-var sortDiscButton = document.getElementById('show-discussions')
-sortDiscButton.addEventListener('click', sortDuckys)
-
-var sortQButton = document.getElementById('show-questions')
-sortQButton.addEventListener('click', sortDuckys)
-
-var sortTutButton = document.getElementById('show-tutorials')
-sortTutButton.addEventListener('click', sortDuckys)
-
 function hideContent() {
-    var duckyContainer = document.getElementById('ducky-container')
+    let duckyContainer = document.getElementById('ducky-container')
 
-    for (var i = 0; i < duckyContainer.children.length; i++) {
+    for (let i = 0; i < duckyContainer.children.length; i++) {
         duckyContainer.children[i].classList.add("hidden")
     }
 }
 
 function addContent() {
-    var duckyContainer = document.getElementById('ducky-container')
+    let duckyContainer = document.getElementById('ducky-container')
 
 
-    for (var i = 0; i < duckyContainer.children.length; i++) {
+    for (let i = 0; i < duckyContainer.children.length; i++) {
         if (duckyContainer.children[i].classList.contains("ducky")) {
             duckyContainer.children[i].classList.remove("hidden")
             duckyContainer.children[i].children[0].children[2].classList.add("hidden")
@@ -164,8 +125,8 @@ function addContent() {
 }
 
 function hideButtons() {
-    var buttonContainer = document.getElementById('button-container')
-    for (var i = 0; i < buttonContainer.children.length; i++) {
+    let buttonContainer = document.getElementById('button-container')
+    for (let i = 0; i < buttonContainer.children.length; i++) {
         if (!buttonContainer.children[i].classList.contains('hidden')) {
             buttonContainer.children[i].classList.add('hidden')
         } else {
@@ -173,13 +134,13 @@ function hideButtons() {
         }
     }
 
-    var unhideReply = document.getElementById('add-replies')
+    let unhideReply = document.getElementById('add-replies')
     unhideReply.classList.remove('hidden')
 }
 
 function returnHome() {
-    var buttonContainer = document.getElementById('button-container')
-    for (var i = 0; i < buttonContainer.children.length; i++) {
+    let buttonContainer = document.getElementById('button-container')
+    for (let i = 0; i < buttonContainer.children.length; i++) {
         if (!buttonContainer.children[i].classList.contains('hidden')) {
             buttonContainer.children[i].classList.add('hidden')
         } else {
@@ -187,28 +148,14 @@ function returnHome() {
         }
     }
 
-    var unhideReply = document.getElementById('add-replies')
+    let unhideReply = document.getElementById('add-replies')
     unhideReply.classList.add('hidden')
 
     addContent()
 }
 
-var goBackButton = document.getElementById('go-back')
-goBackButton.addEventListener('click', returnHome)
-
 function showPost(event) {
     //set any clicked buttons to unclicked
-    var discussionsButton = document.getElementById('show-discussions')
-    var questionsButton = document.getElementById('show-questions')
-    var tutorialsButton = document.getElementById('show-tutorials')
-    discussionsButton.classList.remove('clicked')
-    questionsButton.classList.remove('clicked')
-    tutorialsButton.classList.remove('clicked')
-
-    //set any clicked buttons to unclicked
-    var discussionsButton = document.getElementById('show-discussions')
-    var questionsButton = document.getElementById('show-questions')
-    var tutorialsButton = document.getElementById('show-tutorials')
     discussionsButton.classList.remove('clicked')
     questionsButton.classList.remove('clicked')
     tutorialsButton.classList.remove('clicked')
@@ -217,50 +164,54 @@ function showPost(event) {
 
     event.currentTarget.classList.remove("hidden")
 
-    var repliesContainer = event.currentTarget.nextSibling.nextSibling
+    let repliesContainer = event.currentTarget.nextSibling.nextSibling
     repliesContainer.classList.remove("hidden")
 
-    var duckyText = event.currentTarget.children[0].children[2]
+    let duckyText = event.currentTarget.children[0].children[2]
     duckyText.classList.remove("hidden")
 
     hideButtons()
 
 }
 
-function updatePost()
-{
-    var duckyPosts = document.getElementsByClassName('ducky')
-    for (var i = 0; i < duckyPosts.length; i++) {
-        duckyPosts[i].addEventListener('click', showPost)
-    }
+function postDuckyHTML (ducky) {
+    let duckyContainer = document.getElementById('ducky-container')
+    duckyContainer.insertAdjacentHTML('afterbegin', ducky)
 
+    duckyContainer.firstChild.addEventListener('click', showPost)
+    duckyStorage.push(duckyContainer.firstChild)
+
+    toggleModal()
+
+    //unsort all posts
+    for (let k = 0; k < duckyCollection.length; k++) {
+        duckyCollection[k].classList.remove('hidden')
+    }
+    discussionsButton.classList.remove('clicked')
+    questionsButton.classList.remove('clicked')
+    tutorialsButton.classList.remove('clicked')
 }
 
 
 function publishPost(event) {
-    var textField = document.getElementById('ducky-text-input')
-    var authorField = document.getElementById('ducky-author-input')
-    var titleField = document.getElementById('ducky-title-input')
-    var dropField = document.getElementById('ducky-type-input')
+    let textField = document.getElementById('ducky-text-input')
+    let authorField = document.getElementById('ducky-author-input')
+    let titleField = document.getElementById('ducky-title-input')
+    let dropField = document.getElementById('ducky-type-input')
 
     console.log("Title Field >>", dropField.value)
 
-    var textFieldContent = textField.value
-    var authorFieldContent = authorField.value
-    var titleFieldContent = titleField.value
+    let textFieldContent = textField.value
+    let authorFieldContent = authorField.value
+    let titleFieldContent = titleField.value
 
     textFieldContent = textFieldContent.replaceAll(' ', '')
     authorFieldContent = authorFieldContent.replaceAll(' ', '')
     titleFieldContent = titleFieldContent.replaceAll(' ', '')
 
-    var time = new Date()
-    var userTime = time.getHours() + ":" + time.getMinutes()
+    let userTime = getTimeStr()
 
     if ((textFieldContent != '') && (authorFieldContent != '') && (titleFieldContent != '') && (dropField.value != '')) {
-
-        console.log(">> title: ", titleFieldContent)
-        console.log(">> text: ", textFieldContent)
-        console.log(">> author: ", authorFieldContent)
 
         fetch('/store', {
             method: 'POST',
@@ -275,78 +226,50 @@ function publishPost(event) {
             headers: {
                 'Content-Type': 'application/json'
             }
+        }).then((res) => {
+            if (res.status == 200) {
+                let ducky = Handlebars.templates.ducky({
+                    showText: false,
+                    title: titleField.value,
+                    text: textField.value,
+                    time: userTime,
+                    author: authorField.value,
+                    label: dropField.value.toUpperCase(),
+                    type: dropField.value
+                })
+
+                postDuckyHTML(ducky)
+            } else {
+                alert("An error ocurred saving your photo card.")
+            }
         })
-
-        var ducky = Handlebars.templates.ducky({
-            showText: false,
-            title: titleField.value,
-            text: textField.value,
-            time: userTime,
-            author: authorField.value,
-            label: dropField.value.toUpperCase(),
-            type: dropField.value
-        })
-
-        var duckyContainer = document.getElementById('ducky-container')
-        duckyContainer.insertAdjacentHTML('afterbegin', ducky)
-
-        updatePost()
-
-        duckyStoring()
-
-        toggleModal()
-
-        //unsort all posts
-        var duckyCollection = document.getElementsByClassName('ducky')
-        var discussionsButton = document.getElementById('show-discussions')
-        var questionsButton = document.getElementById('show-questions')
-        var tutorialsButton = document.getElementById('show-tutorials')
-        for (var k = 0; k < duckyCollection.length; k++) {
-            duckyCollection[k].classList.remove('hidden')
-        }
-        discussionsButton.classList.remove('clicked')
-        questionsButton.classList.remove('clicked')
-        tutorialsButton.classList.remove('clicked')
-
-    }
-    else {
-        console.log("It was empty")
+    } else {
         alert("You did not properly fill the title/text/author fields.")
     }
-
-
-}
-
-
-var submitPostButton = document.getElementsByClassName('modal-accept-button')
-for (var i = 0; i < submitPostButton.length; i++) {
-    submitPostButton[i].addEventListener('click', publishPost)
 }
 
 function replyPost(event) {
-    var textField = document.getElementById('reply-text-input')
-    var titleField = document.getElementById('reply-title-input')
+    let textField = document.getElementById('reply-text-input')
+    let titleField = document.getElementById('reply-title-input')
 
-    var textFieldContent = textField.value
-    var titleFieldContent = titleField.value
+    let textFieldContent = textField.value
+    let titleFieldContent = titleField.value
 
     textFieldContent = textFieldContent.replaceAll(' ', '')
     titleFieldContent = titleFieldContent.replaceAll(' ', '')
 
-    var time = new Date()
-    var userTime = time.getHours() + ":" + time.getMinutes()
+    let userTime = getTimeStr()
 
     if ((textFieldContent != '') && (titleFieldContent != '')) {
-        var duckyContainer = document.getElementById('ducky-container')
-        var duckLength = duckyContainer.children.length
-        for (var i = 0; i < duckyContainer.children.length; i++) {
+        let duckyContainer = document.getElementById('ducky-container')
+        let position = null
+        for (let i = 0; i < duckyContainer.children.length; i++) {
             if (!duckyContainer.children[i].classList.contains('hidden') && duckyContainer.children[i].classList.contains('ducky')) {
-                var currentPost = duckyContainer.children[i]
-                var position = i/2
+                position = i/2
             }
         }
-        console.log("== POsition:", position)
-        var reply = Handlebars.templates.reply({
+        console.log("== Position:", position)
+        let reply = Handlebars.templates.reply({
             replyText: titleField.value,
             replyAuthor: textField.value,
             replyTime: userTime,
@@ -365,10 +288,9 @@ function replyPost(event) {
             }
         })
 
-        var replyContainer = document.getElementsByClassName('response-container')
+        let replyContainer = document.getElementsByClassName('response-container')
         console.log(replyContainer)
         replyContainer[position].insertAdjacentHTML('beforeend', reply)
-
     }
 
     toggleModalReply()
@@ -381,8 +303,8 @@ function clearModalReply() {
 }
 
 function toggleModalReply() {
-    var replyModal = document.getElementById('create-reply-modal')
-    var duckyBackdrop = document.getElementById('modal-backdrop')
+    let replyModal = document.getElementById('create-reply-modal')
+    let duckyBackdrop = document.getElementById('modal-backdrop')
 
     replyModal.classList.toggle('hidden')
     duckyBackdrop.classList.toggle('hidden')
@@ -390,16 +312,42 @@ function toggleModalReply() {
     clearModalReply()
 }
 
-var replyModal = document.getElementById('add-replies')
-replyModal.addEventListener('click', toggleModalReply)
+//wait until dom is loaded to do all this stuff
+window.addEventListener('DOMContentLoaded', () => {
 
-var closeButton2 = document.getElementsByClassName('reply-modal-cancel-button')
-closeButton2[0].addEventListener('click', toggleModalReply)
+    //Search bar
+    document.getElementById('searchbar').addEventListener('input', searchDuckys)
 
-var xButton2 = document.getElementsByClassName('reply-modal-close-button')
-xButton2[0].addEventListener('click', toggleModalReply)
+    //Create Post Button
+    document.getElementById("add-content").addEventListener('click', toggleModal)
 
-var submitReplyButton = document.getElementsByClassName("reply-modal-accept-button")
-for (var i = 0; i < submitReplyButton.length; i++) {
-    submitReplyButton[i].addEventListener('click', replyPost)
-}
+    //Modal close and cancel
+    document.getElementsByClassName('modal-cancel-button')[0].addEventListener('click', toggleModal)
+    document.getElementsByClassName('modal-close-button')[0].addEventListener('click', toggleModal)
+
+    //Sorting buttons
+    document.getElementById('show-discussions').addEventListener('click', sortDuckys)
+    document.getElementById('show-questions').addEventListener('click', sortDuckys)
+    document.getElementById('show-tutorials').addEventListener('click', sortDuckys)
+
+    document.getElementById('go-back').addEventListener('click', returnHome)
+
+    let submitPostButton = document.getElementsByClassName('modal-accept-button')
+    for (let i = 0; i < submitPostButton.length; i++) {
+        submitPostButton[i].addEventListener('click', publishPost)
+    }
+
+    let replyModal = document.getElementById('add-replies')
+    replyModal.addEventListener('click', toggleModalReply)
+
+    let closeButton2 = document.getElementsByClassName('reply-modal-cancel-button')
+    closeButton2[0].addEventListener('click', toggleModalReply)
+
+    let xButton2 = document.getElementsByClassName('reply-modal-close-button')
+    xButton2[0].addEventListener('click', toggleModalReply)
+
+    let submitReplyButton = document.getElementsByClassName("reply-modal-accept-button")
+    for (let i = 0; i < submitReplyButton.length; i++) {
+        submitReplyButton[i].addEventListener('click', replyPost)
+    }
+})

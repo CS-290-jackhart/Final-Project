@@ -36,7 +36,11 @@ app.post('/store', function(req, res, next){
   fs.writeFile("./data.json",
   JSON.stringify(data, null, 2),
   function(err){
-
+    if (!err) {
+      res.status(200).send()
+    } else {
+      res.status(500).send("Erorr: error saving the ducky.")
+    }
   })
 })
 
@@ -49,7 +53,11 @@ app.post('/storeReply', function(req, res, next){
   fs.writeFile("./data.json",
   JSON.stringify(data, null, 2),
   function(err){
-
+    if (!err) {
+      res.status(200).send()
+    } else {
+      res.status(500).send("Erorr: error saving the reply.")
+    }
   })
 })
 
