@@ -21,11 +21,16 @@ function getTimeStr() {
         minutes = "0" + minutes.toString()
     }
 
-    if (hours > 12) {
-        hours = (hours - 12).toString()
+    if (hours >= 12) {
+        if(hours === 12){
+            hours = hours.toString()
+        }
+        else{
+            hours = (hours - 12).toString()
+        }
         minutes = minutes + " P.M."
     } else {
-        minutes = minutes + "A.M."
+        minutes = minutes + " A.M."
     }
 
     return hours + ":" + minutes

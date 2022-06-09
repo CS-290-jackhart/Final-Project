@@ -12,6 +12,11 @@
           "replyText": "The way that I found to do that is to use charAt(0).toUpperCase() to find the first letter of the word and then append the rest of the word to using .slice(1)",
           "replyAuthor": "Ian Backus",
           "replyTime": "10:36 P.M."
+        },
+        {
+          "replyText": "This was super helpful",
+          "replyAuthor": "Joe ",
+          "replyTime": "12:54 P.M."
         }
       ]
     },
@@ -87,6 +92,11 @@
           "replyAuthor": "Ethan Hardey",
           "replyTime": "1:26 P.M.",
           "replyText": "This man is spitting facts."
+        },
+        {
+          "replyText": "I know right",
+          "replyAuthor": "Jack Hart",
+          "replyTime": "12:57 P.M."
         }
       ]
     }
