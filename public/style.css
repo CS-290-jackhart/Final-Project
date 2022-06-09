@@ -137,7 +137,7 @@ body {
 }
 
 .ducky {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     background-color: white;
     border-style: solid;
     border-color: white;
@@ -201,7 +201,7 @@ body {
 }
 
 .post {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     background-color: white;
     border-style: solid;
     border-color: black;
@@ -261,7 +261,7 @@ body {
 }
 
 .response {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     background-color: white;
     border-style: solid;
     border-color: white;
@@ -394,7 +394,7 @@ body {
 }
 
 #modal-container{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .modal-close-button {

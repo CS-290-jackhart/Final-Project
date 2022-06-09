@@ -176,8 +176,6 @@ function publishPost(event) {
     let titleField = document.getElementById('ducky-title-input')
     let dropField = document.getElementById('ducky-type-input')
 
-    console.log("Title Field >>", dropField.value)
-
     let textFieldContent = textField.value
     let authorFieldContent = authorField.value
     let titleFieldContent = titleField.value
@@ -197,7 +195,7 @@ function publishPost(event) {
                 text: textField.value,
                 time: userTime,
                 author: authorField.value,
-                label: dropField.value.toUpperCase(),
+                label: dropField.value.charAt(0).toUpperCase()+dropField.value.slice(1),
                 type: dropField.value
             }),
             headers: {
@@ -211,7 +209,7 @@ function publishPost(event) {
                     text: textField.value,
                     time: userTime,
                     author: authorField.value,
-                    label: dropField.value.toUpperCase(),
+                    label: dropField.value.charAt(0).toUpperCase()+dropField.value.slice(1),
                     type: dropField.value
                 })
 

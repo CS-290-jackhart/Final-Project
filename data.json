@@ -1,11 +1,26 @@
 {
   "postArray": [
     {
-      "title": "How to to a Hello World program!",
+      "title": "Code Question",
+      "text": "How do would you guys Capitalize the first letter of a word?",
+      "time": "10:33 P.M.",
+      "author": "Ethan Hardey",
+      "label": "Question",
+      "type": "question",
+      "replies": [
+        {
+          "replyText": "The way that I found to do that is to use charAt(0).toUpperCase() to find the first letter of the word and then append the rest of the word to using .slice(1)",
+          "replyAuthor": "Ian Backus",
+          "replyTime": "10:36 P.M."
+        }
+      ]
+    },
+    {
+      "title": "How to do a Hello World program!",
       "text": "The classic Hello World program is quite simple, even for beginners, simply write console.log(Hello World) with Hello World surrounded by quotes.",
       "time": "7:27 P.M.",
       "author": "Ian Backus",
-      "label": "TUTORIAL",
+      "label": "Tutorial",
       "type": "tutorial",
       "replies": [
         {
@@ -19,7 +34,7 @@
       "title": "Variable Question",
       "type": "question",
       "text": "How do I declare a variable in javascript?",
-      "label": "QUESTION",
+      "label": "Question",
       "author": "Ethan Hardey",
       "time": "5:30 P.M.",
       "replies": [
@@ -34,7 +49,7 @@
       "title": "Compiler Question",
       "type": "question",
       "text": "How do compilers work?",
-      "label": "QUESTION",
+      "label": "Question",
       "author": "Jack Hart",
       "time": "3:15 P.M.",
       "replies": [
@@ -49,7 +64,7 @@
       "title": "How to write a for loop in Javascript!",
       "type": "tutorial",
       "text": "For loops in javascript are quite easy, we can write one by typing as follows: for(let i = 0; i < 6; i++){} Inside of those curly brackets you would put the code that would execute inside the loop.",
-      "label": "TUTORIAL",
+      "label": "Tutorial",
       "author": "Ethan Hardey",
       "time": "1:42 P.M.",
       "replies": [
@@ -64,7 +79,7 @@
       "title": "I think Pascal is the best language",
       "type": "discussion",
       "text": "It's obvious really, Pascal combines readability with the teaching of good habits, making it the best language ever created both for veterans and beginner programmers.",
-      "label": "DISCUSSION",
+      "label": "Discussion",
       "author": "Ian Backus",
       "time": "12:42 P.M.",
       "replies": [
