@@ -3,7 +3,7 @@
     {
       "title": "How to to a Hello World program!",
       "text": "The classic Hello World program is quite simple, even for beginners, simply write console.log(Hello World) with Hello World surrounded by quotes.",
-      "time": "19:27",
+      "time": "7:27 P.M.",
       "author": "Ian Backus",
       "label": "TUTORIAL",
       "type": "tutorial",
@@ -11,7 +11,7 @@
         {
           "replyText": "Thanks, that was really helpful",
           "replyAuthor": "Also Ian Backus",
-          "replyTime": "19:30"
+          "replyTime": "7:30 P.M."
         }
       ]
     },
@@ -21,11 +21,11 @@
       "text": "How do I declare a variable in javascript?",
       "label": "QUESTION",
       "author": "Ethan Hardey",
-      "time": "17:30",
+      "time": "5:30 P.M.",
       "replies": [
         {
           "replyAuthor": "Jack Hart",
-          "replyTime": "17:41",
+          "replyTime": "5:41 P.M.",
           "replyText": "Type var variableName = 10"
         }
       ]
@@ -36,11 +36,11 @@
       "text": "How do compilers work?",
       "label": "QUESTION",
       "author": "Jack Hart",
-      "time": "15:15",
+      "time": "3:15 P.M.",
       "replies": [
         {
           "replyAuthor": "Ian Backus",
-          "replyTime": "16:01",
+          "replyTime": "4:01 P.M.",
           "replyText": "A compiler translates the source code in a program into machine code so the computer can understand it."
         }
       ]
@@ -51,11 +51,11 @@
       "text": "For loops in javascript are quite easy, we can write one by typing as follows: for(let i = 0; i < 6; i++){} Inside of those curly brackets you would put the code that would execute inside the loop.",
       "label": "TUTORIAL",
       "author": "Ethan Hardey",
-      "time": "13:42",
+      "time": "1:42 P.M.",
       "replies": [
         {
           "replyAuthor": "Ian Backus",
-          "replyTime": "13:50",
+          "replyTime": "1:50 P.M.",
           "replyText": "Thank you so much."
         }
       ]
@@ -66,11 +66,11 @@
       "text": "It's obvious really, Pascal combines readability with the teaching of good habits, making it the best language ever created both for veterans and beginner programmers.",
       "label": "DISCUSSION",
       "author": "Ian Backus",
-      "time": "12:42",
+      "time": "12:42 P.M.",
       "replies": [
         {
           "replyAuthor": "Ethan Hardey",
-          "replyTime": "1:26",
+          "replyTime": "1:26 P.M.",
           "replyText": "This man is spitting facts."
         }
       ]

@@ -393,6 +393,10 @@ body {
     min-height: 64px;
 }
 
+#modal-container{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .modal-close-button {
     position: absolute;
     right: 10px;
