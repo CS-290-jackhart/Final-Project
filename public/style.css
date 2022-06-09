@@ -65,7 +65,7 @@ body {
 #button-container input {
     height: 60px;
     font-size: 40px;
-    margin-top: 20px;
+    margin-top: 5%;
     border-style: solid;
     border-color: white;
     border-radius: 10px;
@@ -99,9 +99,9 @@ body {
     background-color: var(--navbar-bg-color);
 }
 
-button#add-content {
+/* button#add-content {
     margin-top: 45px;
-}
+} */
 
 #add-replies{
     justify-content: center;
@@ -144,9 +144,9 @@ button#add-content {
     border-radius: 7px;
     margin: 25px;
     margin-left: 1%;
-    padding: 10px;
+    padding: 9px;
     min-height: 100px;
-    width: 70%;
+    width: 65%;
 }
 
 .ducky-link {
