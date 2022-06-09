@@ -1,6 +1,6 @@
 <main id="ducky-container">
     {{#each duckies}}
-        <a href="/posts/{{@index}}" class="ducky-link">
+        <a href="/posts/{{invert @index}}" class="ducky-link">
         {{> ducky}}
         </a>
     {{/each}}

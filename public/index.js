@@ -7,7 +7,7 @@ let discussionsButton = document.getElementById('show-discussions')
 let questionsButton = document.getElementById('show-questions')
 let tutorialsButton = document.getElementById('show-tutorials')
 
-for (let i = 0; i < getDuckys.length; i++) {
+for (let i = (getDuckys.length - 1); i >= 0; i--) {
     duckyStorage.push(getDuckys[i])
 }
 
@@ -23,7 +23,9 @@ function getTimeStr() {
 
     if (hours > 12) {
         hours = (hours - 12).toString()
-        console.log()
+        minutes = minutes + " P.M."
+    } else {
+        minutes = minutes + "A.M."
     }
 
     return hours + ":" + minutes
@@ -34,13 +36,17 @@ function searchDuckys() {
     userInput = userInput.toLowerCase()
     let duckyCollection = document.getElementsByClassName('ducky')
 
-    //console.log('ducky content:', duckyStorage[i])
+    let duckyAuthor = document.getElementsByClassName('ducky-author')
+    let duckyTitles = document.getElementsByClassName('ducky-title')
 
+    
     for (let i = 0; i < duckyCollection.length; i++) {
-        if (!duckyStorage[i].textContent.toLowerCase().includes(userInput)) {
-            duckyCollection[i].classList.add('hidden')
-        } else {
+        if (
+            (duckyAuthor[i].textContent.toLowerCase().includes(userInput)) ||
+            (duckyTitles[i].textContent.toLowerCase().includes(userInput))) {
             duckyCollection[i].classList.remove('hidden')
+        } else {
+            duckyCollection[i].classList.add('hidden')
         }
     }
 }
@@ -140,10 +146,16 @@ function hideButtons() {
 }
 
 function postDuckyHTML (ducky) {
-    let duckyContainer = document.getElementById('ducky-container')
-    duckyContainer.insertAdjacentHTML('afterbegin', ducky)
+    var outerArticle = document.createElement('a')
+    outerArticle.classList.add('ducky-link')
 
-    duckyContainer.firstChild.addEventListener('click', showPost)
+    outerArticle.insertAdjacentHTML('afterbegin', ducky)
+
+    let duckyContainer = document.getElementById('ducky-container')
+    duckyContainer.insertAdjacentElement('afterbegin', outerArticle)
+
+    outerArticle.href = "/posts/" + (duckyStorage.length + 1)
+
     duckyStorage.push(duckyContainer.firstChild)
 
     toggleModal()
@@ -227,6 +239,7 @@ function replyPost(event) {
 
     if ((textFieldContent != '') && (titleFieldContent != '')) {
         let position = parseInt(window.location.href.substring(28))
+
         let reply = Handlebars.templates.reply({
             replyText: titleField.value,
             replyAuthor: textField.value,
@@ -306,7 +319,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
 
     let replyModal = document.getElementById('add-replies')
-    console.log('here')
+
     if(replyModal)
         replyModal.addEventListener('click', toggleModalReply)
 

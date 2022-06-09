@@ -1,4 +1,5 @@
 var path = require('path')
+var handlebars = require('handlebars')
 var express = require('express')
 var exphbs = require('express-handlebars')
 var fs = require('fs')
@@ -12,6 +13,10 @@ app.set('view engine', 'handlebars')
 
 var port = process.env.PORT || 8000
 
+handlebars.registerHelper("invert", (value, options) => {
+  return (data.postArray.length - parseInt(value))
+})
+
 app.use(express.json())
 
 app.use(express.static('public'))
@@ -23,7 +28,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/posts/:num', (req, res, next) => {
-  let num = req.params.num
+  let num = (data.postArray.length - req.params.num)
   if (num < 0 || num >= data.postArray.length) {
     next()
   } else {
@@ -57,7 +62,7 @@ app.post('/store', function(req, res, next){
 })
 
 app.post('/storeReply', function(req, res, next){
-  data.postArray[req.body.position].replies.push({
+  data.postArray[data.postArray.length - req.body.position].replies.push({
     replyText: req.body.replyText,
     replyAuthor: req.body.replyAuthor,
     replyTime: req.body.replyTime
